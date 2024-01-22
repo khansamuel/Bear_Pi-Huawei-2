@@ -1,0 +1,250 @@
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccyM76Ij.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"gpio.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  18              		.align	1
+  19              		.global	MX_GPIO_Init
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	MX_GPIO_Init:
+  26              	.LFB287:
+  27              		.file 1 "C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src/gpio.c"
+   1:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /**
+   2:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   ******************************************************************************
+   3:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * File Name          : gpio.c
+   4:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * Description        : This file provides code for the configuration
+   5:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *                      of all used GPIO pins.
+   6:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   ******************************************************************************
+   7:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   ** This notice applies to any and all portions of this file
+   8:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * that are not between comment pairs USER CODE BEGIN and
+   9:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * USER CODE END. Other portions of this file, whether 
+  10:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * inserted by the user or by software development tools
+  11:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * are owned by their respective copyright owners.
+  12:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *
+  13:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * COPYRIGHT(c) 2018 STMicroelectronics
+  14:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *
+  15:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  16:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * are permitted provided that the following conditions are met:
+  17:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  18:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *      this list of conditions and the following disclaimer.
+  19:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  20:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *      this list of conditions and the following disclaimer in the documentation
+  21:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *      and/or other materials provided with the distribution.
+  22:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  23:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *      may be used to endorse or promote products derived from this software
+  24:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *      without specific prior written permission.
+  25:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *
+  26:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  27:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  28:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  29:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  30:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  31:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccyM76Ij.s 			page 2
+
+
+  32:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  33:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  34:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  35:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  36:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   *
+  37:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   ******************************************************************************
+  38:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   */
+  39:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 
+  40:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /* Includes ------------------------------------------------------------------*/
+  41:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** #include "gpio.h"
+  42:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /* USER CODE BEGIN 0 */
+  43:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 
+  44:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /* USER CODE END 0 */
+  45:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 
+  46:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /*----------------------------------------------------------------------------*/
+  47:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /* Configure GPIO                                                             */
+  48:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /*----------------------------------------------------------------------------*/
+  49:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /* USER CODE BEGIN 1 */
+  50:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 
+  51:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /* USER CODE END 1 */
+  52:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 
+  53:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** /** Configure pins as 
+  54:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****         * Analog 
+  55:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****         * Input 
+  56:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****         * Output
+  57:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****         * EVENT_OUT
+  58:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****         * EXTI
+  59:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** */
+  60:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** void MX_GPIO_Init(void)
+  61:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** {
+  28              		.loc 1 61 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 40
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32 0000 80B5     		push	{r7, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 8AB0     		sub	sp, sp, #40
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 48
+  40 0004 00AF     		add	r7, sp, #0
+  41              	.LCFI2:
+  42              		.cfi_def_cfa_register 7
+  43              	.LBB2:
+  62:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 
+  63:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   GPIO_InitTypeDef GPIO_InitStruct;
+  64:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 
+  65:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   /* GPIO Ports Clock Enable */
+  66:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
+  44              		.loc 1 66 0
+  45 0006 204B     		ldr	r3, .L2
+  46 0008 DB6C     		ldr	r3, [r3, #76]
+  47 000a 1F4A     		ldr	r2, .L2
+  48 000c 43F00403 		orr	r3, r3, #4
+  49 0010 D364     		str	r3, [r2, #76]
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccyM76Ij.s 			page 3
+
+
+  50 0012 1D4B     		ldr	r3, .L2
+  51 0014 DB6C     		ldr	r3, [r3, #76]
+  52 0016 03F00403 		and	r3, r3, #4
+  53 001a 3B61     		str	r3, [r7, #16]
+  54 001c 3B69     		ldr	r3, [r7, #16]
+  55              	.LBE2:
+  56              	.LBB3:
+  67:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   __HAL_RCC_GPIOH_CLK_ENABLE();
+  57              		.loc 1 67 0
+  58 001e 1A4B     		ldr	r3, .L2
+  59 0020 DB6C     		ldr	r3, [r3, #76]
+  60 0022 194A     		ldr	r2, .L2
+  61 0024 43F08003 		orr	r3, r3, #128
+  62 0028 D364     		str	r3, [r2, #76]
+  63 002a 174B     		ldr	r3, .L2
+  64 002c DB6C     		ldr	r3, [r3, #76]
+  65 002e 03F08003 		and	r3, r3, #128
+  66 0032 FB60     		str	r3, [r7, #12]
+  67 0034 FB68     		ldr	r3, [r7, #12]
+  68              	.LBE3:
+  69              	.LBB4:
+  68:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  70              		.loc 1 68 0
+  71 0036 144B     		ldr	r3, .L2
+  72 0038 DB6C     		ldr	r3, [r3, #76]
+  73 003a 134A     		ldr	r2, .L2
+  74 003c 43F00103 		orr	r3, r3, #1
+  75 0040 D364     		str	r3, [r2, #76]
+  76 0042 114B     		ldr	r3, .L2
+  77 0044 DB6C     		ldr	r3, [r3, #76]
+  78 0046 03F00103 		and	r3, r3, #1
+  79 004a BB60     		str	r3, [r7, #8]
+  80 004c BB68     		ldr	r3, [r7, #8]
+  81              	.LBE4:
+  82              	.LBB5:
+  69:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+  83              		.loc 1 69 0
+  84 004e 0E4B     		ldr	r3, .L2
+  85 0050 DB6C     		ldr	r3, [r3, #76]
+  86 0052 0D4A     		ldr	r2, .L2
+  87 0054 43F00203 		orr	r3, r3, #2
+  88 0058 D364     		str	r3, [r2, #76]
+  89 005a 0B4B     		ldr	r3, .L2
+  90 005c DB6C     		ldr	r3, [r3, #76]
+  91 005e 03F00203 		and	r3, r3, #2
+  92 0062 7B60     		str	r3, [r7, #4]
+  93 0064 7B68     		ldr	r3, [r7, #4]
+  94              	.LBE5:
+  70:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 
+  71:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //	/*Configure GPIO pin Output Level */
+  72:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //  HAL_GPIO_WritePin(Light_GPIO_Port, Light_Pin, GPIO_PIN_RESET);
+  73:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //
+  74:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //	/*Configure GPIO pin : PtPin */
+  75:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //  GPIO_InitStruct.Pin = Light_Pin;
+  76:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  77:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  78:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccyM76Ij.s 			page 4
+
+
+  79:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** //  HAL_GPIO_Init(Light_GPIO_Port, &GPIO_InitStruct);
+  80:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 	
+  81:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 	GPIO_InitStruct.Pin = KEY1_Pin|KEY2_Pin;
+  95              		.loc 1 81 0
+  96 0066 0C23     		movs	r3, #12
+  97 0068 7B61     		str	r3, [r7, #20]
+  82:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  98              		.loc 1 82 0
+  99 006a 084B     		ldr	r3, .L2+4
+ 100 006c BB61     		str	r3, [r7, #24]
+  83:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 101              		.loc 1 83 0
+ 102 006e 0123     		movs	r3, #1
+ 103 0070 FB61     		str	r3, [r7, #28]
+  84:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 104              		.loc 1 84 0
+ 105 0072 07F11403 		add	r3, r7, #20
+ 106 0076 1946     		mov	r1, r3
+ 107 0078 0548     		ldr	r0, .L2+8
+ 108 007a FFF7FEFF 		bl	HAL_GPIO_Init
+  85:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** 	
+  86:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Src\gpio.c **** }
+ 109              		.loc 1 86 0
+ 110 007e 00BF     		nop
+ 111 0080 2837     		adds	r7, r7, #40
+ 112              	.LCFI3:
+ 113              		.cfi_def_cfa_offset 8
+ 114 0082 BD46     		mov	sp, r7
+ 115              	.LCFI4:
+ 116              		.cfi_def_cfa_register 13
+ 117              		@ sp needed
+ 118 0084 80BD     		pop	{r7, pc}
+ 119              	.L3:
+ 120 0086 00BF     		.align	2
+ 121              	.L2:
+ 122 0088 00100240 		.word	1073876992
+ 123 008c 00002110 		.word	270598144
+ 124 0090 00040048 		.word	1207960576
+ 125              		.cfi_endproc
+ 126              	.LFE287:
+ 128              		.text
+ 129              	.Letext0:
+ 130              		.file 2 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 131              		.file 3 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 132              		.file 4 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 133              		.file 5 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\lib\\
+ 134              		.file 6 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 135              		.file 7 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/include/los_typedef.h"
+ 136              		.file 8 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 137              		.file 9 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/arch/arm/common/cmsis/
+ 138              		.file 10 "C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Inc/system_
+ 139              		.file 11 "C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Inc/stm32l4
+ 140              		.file 12 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/include/los_config.h"
+ 141              		.file 13 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/include/los_err.h"
+ 142              		.file 14 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/arch/arm/arm-m/includ
+ 143              		.file 15 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/drivers/third_party/ST/STM32L4xx_HAL_Dri
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccyM76Ij.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gpio.c
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccyM76Ij.s:18     .text.MX_GPIO_Init:00000000 $t
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccyM76Ij.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccyM76Ij.s:122    .text.MX_GPIO_Init:00000088 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init

@@ -1,0 +1,464 @@
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"hello_world_demo.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata
+  18              		.align	2
+  19              	.LC0:
+  20 0000 48656C6C 		.ascii	"Hello World! This is LiteOS!\015\000"
+  20      6F20576F 
+  20      726C6421 
+  20      20546869 
+  20      73206973 
+  21              		.section	.text.app_hello_world_entry,"ax",%progbits
+  22              		.align	1
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  26              		.fpu fpv4-sp-d16
+  28              	app_hello_world_entry:
+  29              	.LFB287:
+  30              		.file 1 "C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_
+   1:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** /*----------------------------------------------------------------------------
+   2:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * Copyright (c) <2018>, <Huawei Technologies Co., Ltd>
+   3:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * All rights reserved.
+   4:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * Redistribution and use in source and binary forms, with or without modification,
+   5:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * are permitted provided that the following conditions are met:
+   6:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * 1. Redistributions of source code must retain the above copyright notice, this list of
+   7:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * conditions and the following disclaimer.
+   8:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * 2. Redistributions in binary form must reproduce the above copyright notice, this list
+   9:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * of conditions and the following disclaimer in the documentation and/or other materials
+  10:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * provided with the distribution.
+  11:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * 3. Neither the name of the copyright holder nor the names of its contributors may be used
+  12:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * to endorse or promote products derived from this software without specific prior written
+  13:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * permission.
+  14:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  15:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+  16:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  17:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+  18:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  19:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  20:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  21:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  22:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  23:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+  24:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 2
+
+
+  25:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  *---------------------------------------------------------------------------*/
+  26:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** /*----------------------------------------------------------------------------
+  27:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * Notice of Export Control Law
+  28:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * ===============================================
+  29:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * Huawei LiteOS may be subject to applicable export control laws and regulations, which might
+  30:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * include those applicable to Huawei LiteOS of U.S. and the country in which you are located.
+  31:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * Import, export and usage of Huawei LiteOS in any manner by you shall be in compliance with such
+  32:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  * applicable export control laws and regulations.
+  33:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  *---------------------------------------------------------------------------*/
+  34:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** /**
+  35:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  *  DATE                AUTHOR      INSTRUCTION
+  36:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  *  2019-07-23 10:00    yuhengP    The first version  
+  37:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  *
+  38:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  */
+  39:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** #include <stdint.h>
+  40:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** #include <stddef.h>
+  41:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** #include <string.h>
+  42:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** 
+  43:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** #include <osal.h>
+  44:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** #include "lcd.h"
+  45:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** static int app_hello_world_entry()
+  46:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** {
+  31              		.loc 1 46 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35 0000 80B5     		push	{r7, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40 0002 00AF     		add	r7, sp, #0
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_register 7
+  43              	.L2:
+  47:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     while (1)
+  48:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     {
+  49:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         printf("Hello World! This is LiteOS!\r\n");
+  44              		.loc 1 49 0 discriminator 1
+  45 0004 0348     		ldr	r0, .L3
+  46 0006 FFF7FEFF 		bl	puts
+  50:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         osal_task_sleep(4*1000);
+  47              		.loc 1 50 0 discriminator 1
+  48 000a 4FF47A60 		mov	r0, #4000
+  49 000e FFF7FEFF 		bl	osal_task_sleep
+  49:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         osal_task_sleep(4*1000);
+  50              		.loc 1 49 0 discriminator 1
+  51 0012 F7E7     		b	.L2
+  52              	.L4:
+  53              		.align	2
+  54              	.L3:
+  55 0014 00000000 		.word	.LC0
+  56              		.cfi_endproc
+  57              	.LFE287:
+  59              		.section	.rodata
+  60 001e 0000     		.align	2
+  61              	.LC1:
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 3
+
+
+  62 0020 54686973 		.ascii	"This is Task2!\015\000"
+  62      20697320 
+  62      5461736B 
+  62      32210D00 
+  63              		.section	.text.task2,"ax",%progbits
+  64              		.align	1
+  65              		.syntax unified
+  66              		.thumb
+  67              		.thumb_func
+  68              		.fpu fpv4-sp-d16
+  70              	task2:
+  71              	.LFB288:
+  51:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     }
+  52:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** }
+  53:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** static int task2()
+  54:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** {
+  72              		.loc 1 54 0
+  73              		.cfi_startproc
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 1, uses_anonymous_args = 0
+  76 0000 80B5     		push	{r7, lr}
+  77              	.LCFI2:
+  78              		.cfi_def_cfa_offset 8
+  79              		.cfi_offset 7, -8
+  80              		.cfi_offset 14, -4
+  81 0002 00AF     		add	r7, sp, #0
+  82              	.LCFI3:
+  83              		.cfi_def_cfa_register 7
+  84              	.L6:
+  55:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     while (1)
+  56:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     {
+  57:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         printf("This is Task2!\r\n");
+  85              		.loc 1 57 0 discriminator 1
+  86 0004 0348     		ldr	r0, .L7
+  87 0006 FFF7FEFF 		bl	puts
+  58:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         osal_task_sleep(4*1000);
+  88              		.loc 1 58 0 discriminator 1
+  89 000a 4FF47A60 		mov	r0, #4000
+  90 000e FFF7FEFF 		bl	osal_task_sleep
+  57:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         osal_task_sleep(4*1000);
+  91              		.loc 1 57 0 discriminator 1
+  92 0012 F7E7     		b	.L6
+  93              	.L8:
+  94              		.align	2
+  95              	.L7:
+  96 0014 20000000 		.word	.LC1
+  97              		.cfi_endproc
+  98              	.LFE288:
+ 100              		.section	.text.led_task,"ax",%progbits
+ 101              		.align	1
+ 102              		.syntax unified
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.fpu fpv4-sp-d16
+ 107              	led_task:
+ 108              	.LFB289:
+  59:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     }
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 4
+
+
+  60:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** }
+  61:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** static int led_task()
+  62:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** {
+ 109              		.loc 1 62 0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 24
+ 112              		@ frame_needed = 1, uses_anonymous_args = 0
+ 113 0000 80B5     		push	{r7, lr}
+ 114              	.LCFI4:
+ 115              		.cfi_def_cfa_offset 8
+ 116              		.cfi_offset 7, -8
+ 117              		.cfi_offset 14, -4
+ 118 0002 86B0     		sub	sp, sp, #24
+ 119              	.LCFI5:
+ 120              		.cfi_def_cfa_offset 32
+ 121 0004 00AF     		add	r7, sp, #0
+ 122              	.LCFI6:
+ 123              		.cfi_def_cfa_register 7
+  63:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     GPIO_InitTypeDef GPIO_InitStruct;
+  64:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     GPIO_InitStruct.Pin = GPIO_PIN_13;
+ 124              		.loc 1 64 0
+ 125 0006 4FF40053 		mov	r3, #8192
+ 126 000a 7B60     		str	r3, [r7, #4]
+  65:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 127              		.loc 1 65 0
+ 128 000c 0123     		movs	r3, #1
+ 129 000e BB60     		str	r3, [r7, #8]
+  66:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 130              		.loc 1 66 0
+ 131 0010 0023     		movs	r3, #0
+ 132 0012 FB60     		str	r3, [r7, #12]
+  67:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 133              		.loc 1 67 0
+ 134 0014 0023     		movs	r3, #0
+ 135 0016 3B61     		str	r3, [r7, #16]
+  68:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 136              		.loc 1 68 0
+ 137 0018 3B1D     		adds	r3, r7, #4
+ 138 001a 1946     		mov	r1, r3
+ 139 001c 0F48     		ldr	r0, .L13
+ 140 001e FFF7FEFF 		bl	HAL_GPIO_Init
+ 141              	.L12:
+  69:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     while (1)
+  70:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** 
+  71:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     {        if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_2)==GPIO_PIN_RESET)//Query keyKEY1Low level
+ 142              		.loc 1 71 0
+ 143 0022 0421     		movs	r1, #4
+ 144 0024 0E48     		ldr	r0, .L13+4
+ 145 0026 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 146 002a 0346     		mov	r3, r0
+ 147 002c 002B     		cmp	r3, #0
+ 148 002e 06D1     		bne	.L10
+  72:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         {
+  73:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****             HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+ 149              		.loc 1 73 0
+ 150 0030 0122     		movs	r2, #1
+ 151 0032 4FF40051 		mov	r1, #8192
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 5
+
+
+ 152 0036 0948     		ldr	r0, .L13
+ 153 0038 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 154 003c F1E7     		b	.L12
+ 155              	.L10:
+  74:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         }else if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_3)==GPIO_PIN_RESET)//Query keyKEY2Low level
+ 156              		.loc 1 74 0
+ 157 003e 0821     		movs	r1, #8
+ 158 0040 0748     		ldr	r0, .L13+4
+ 159 0042 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 160 0046 0346     		mov	r3, r0
+ 161 0048 002B     		cmp	r3, #0
+ 162 004a EAD1     		bne	.L12
+  75:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         {
+  76:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****             HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+ 163              		.loc 1 76 0
+ 164 004c 0022     		movs	r2, #0
+ 165 004e 4FF40051 		mov	r1, #8192
+ 166 0052 0248     		ldr	r0, .L13
+ 167 0054 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  71:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         {
+ 168              		.loc 1 71 0
+ 169 0058 E3E7     		b	.L12
+ 170              	.L14:
+ 171 005a 00BF     		.align	2
+ 172              	.L13:
+ 173 005c 00080048 		.word	1207961600
+ 174 0060 00040048 		.word	1207960576
+ 175              		.cfi_endproc
+ 176              	.LFE289:
+ 178              		.section	.rodata
+ 179              		.align	2
+ 180              	.LC2:
+ 181 0030 57656C63 		.ascii	"Welcome to LiteOS\000"
+ 181      6F6D6520 
+ 181      746F204C 
+ 181      6974654F 
+ 181      5300
+ 182 0042 0000     		.align	2
+ 183              	.LC3:
+ 184 0044 68656C6C 		.ascii	"helloworld\000"
+ 184      6F776F72 
+ 184      6C6400
+ 185 004f 00       		.align	2
+ 186              	.LC4:
+ 187 0050 7461736B 		.ascii	"task2\000"
+ 187      3200
+ 188 0056 0000     		.align	2
+ 189              	.LC5:
+ 190 0058 6C65645F 		.ascii	"led_task\000"
+ 190      7461736B 
+ 190      00
+ 191              		.section	.text.standard_app_demo_main,"ax",%progbits
+ 192              		.align	1
+ 193              		.global	standard_app_demo_main
+ 194              		.syntax unified
+ 195              		.thumb
+ 196              		.thumb_func
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 6
+
+
+ 197              		.fpu fpv4-sp-d16
+ 199              	standard_app_demo_main:
+ 200              	.LFB290:
+  77:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         }
+  78:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** }
+  79:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     {
+  80:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+  81:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         osal_task_sleep(1*1000);
+  82:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
+  83:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****         osal_task_sleep(1*1000);
+  84:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     }
+  85:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** }
+  86:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** 
+  87:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** int standard_app_demo_main()
+  88:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** 
+  89:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** {
+ 201              		.loc 1 89 0
+ 202              		.cfi_startproc
+ 203              		@ args = 0, pretend = 0, frame = 0
+ 204              		@ frame_needed = 1, uses_anonymous_args = 0
+ 205 0000 80B5     		push	{r7, lr}
+ 206              	.LCFI7:
+ 207              		.cfi_def_cfa_offset 8
+ 208              		.cfi_offset 7, -8
+ 209              		.cfi_offset 14, -4
+ 210 0002 82B0     		sub	sp, sp, #8
+ 211              	.LCFI8:
+ 212              		.cfi_def_cfa_offset 16
+ 213 0004 02AF     		add	r7, sp, #8
+ 214              	.LCFI9:
+ 215              		.cfi_def_cfa 7, 8
+  90:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     LCD_Clear(BLACK);
+ 216              		.loc 1 90 0
+ 217 0006 0020     		movs	r0, #0
+ 218 0008 FFF7FEFF 		bl	LCD_Clear
+  91:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     POINT_COLOR = GREEN;
+ 219              		.loc 1 91 0
+ 220 000c 194B     		ldr	r3, .L17
+ 221 000e 4FF4FC62 		mov	r2, #2016
+ 222 0012 1A80     		strh	r2, [r3]	@ movhi
+  92:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****  LCD_ShowString(10, 10, 200, 16, 24, "Welcome to LiteOS");
+ 223              		.loc 1 92 0
+ 224 0014 184B     		ldr	r3, .L17+4
+ 225 0016 0193     		str	r3, [sp, #4]
+ 226 0018 1823     		movs	r3, #24
+ 227 001a 0093     		str	r3, [sp]
+ 228 001c 1023     		movs	r3, #16
+ 229 001e C822     		movs	r2, #200
+ 230 0020 0A21     		movs	r1, #10
+ 231 0022 0A20     		movs	r0, #10
+ 232 0024 FFF7FEFF 		bl	LCD_ShowString
+  93:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** 
+  94:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     osal_task_create("helloworld",app_hello_world_entry,NULL,0x400,NULL,2);
+ 233              		.loc 1 94 0
+ 234 0028 0223     		movs	r3, #2
+ 235 002a 0193     		str	r3, [sp, #4]
+ 236 002c 0023     		movs	r3, #0
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 7
+
+
+ 237 002e 0093     		str	r3, [sp]
+ 238 0030 4FF48063 		mov	r3, #1024
+ 239 0034 0022     		movs	r2, #0
+ 240 0036 1149     		ldr	r1, .L17+8
+ 241 0038 1148     		ldr	r0, .L17+12
+ 242 003a FFF7FEFF 		bl	osal_task_create
+  95:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****   osal_task_create("task2",task2,NULL,0x400,NULL,2);
+ 243              		.loc 1 95 0
+ 244 003e 0223     		movs	r3, #2
+ 245 0040 0193     		str	r3, [sp, #4]
+ 246 0042 0023     		movs	r3, #0
+ 247 0044 0093     		str	r3, [sp]
+ 248 0046 4FF48063 		mov	r3, #1024
+ 249 004a 0022     		movs	r2, #0
+ 250 004c 0D49     		ldr	r1, .L17+16
+ 251 004e 0E48     		ldr	r0, .L17+20
+ 252 0050 FFF7FEFF 		bl	osal_task_create
+  96:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****   osal_task_create("led_task",led_task,NULL,0x400,NULL,2);
+ 253              		.loc 1 96 0
+ 254 0054 0223     		movs	r3, #2
+ 255 0056 0193     		str	r3, [sp, #4]
+ 256 0058 0023     		movs	r3, #0
+ 257 005a 0093     		str	r3, [sp]
+ 258 005c 4FF48063 		mov	r3, #1024
+ 259 0060 0022     		movs	r2, #0
+ 260 0062 0A49     		ldr	r1, .L17+24
+ 261 0064 0A48     		ldr	r0, .L17+28
+ 262 0066 FFF7FEFF 		bl	osal_task_create
+  97:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c ****     return 0;
+ 263              		.loc 1 97 0
+ 264 006a 0023     		movs	r3, #0
+  98:C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Demos/hello_world_demo\hello_world_demo.c **** }
+ 265              		.loc 1 98 0
+ 266 006c 1846     		mov	r0, r3
+ 267 006e BD46     		mov	sp, r7
+ 268              	.LCFI10:
+ 269              		.cfi_def_cfa_register 13
+ 270              		@ sp needed
+ 271 0070 80BD     		pop	{r7, pc}
+ 272              	.L18:
+ 273 0072 00BF     		.align	2
+ 274              	.L17:
+ 275 0074 00000000 		.word	POINT_COLOR
+ 276 0078 30000000 		.word	.LC2
+ 277 007c 00000000 		.word	app_hello_world_entry
+ 278 0080 44000000 		.word	.LC3
+ 279 0084 00000000 		.word	task2
+ 280 0088 50000000 		.word	.LC4
+ 281 008c 00000000 		.word	led_task
+ 282 0090 58000000 		.word	.LC5
+ 283              		.cfi_endproc
+ 284              	.LFE290:
+ 286              		.text
+ 287              	.Letext0:
+ 288              		.file 2 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 289              		.file 3 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 290              		.file 4 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 8
+
+
+ 291              		.file 5 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 292              		.file 6 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\lib\\
+ 293              		.file 7 "c:\\users\\sam.kinuthia\\opensourcetools\\gnu tools arm embedded\\7 2018-q2-update\\arm-n
+ 294              		.file 8 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/include/los_typedef.h"
+ 295              		.file 9 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/arch/arm/common/cmsis/
+ 296              		.file 10 "C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Inc/system_
+ 297              		.file 11 "C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Inc/stm32l4
+ 298              		.file 12 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/include/los_config.h"
+ 299              		.file 13 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/include/los_err.h"
+ 300              		.file 14 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/iot_link/os/liteos/arch/arm/arm-m/includ
+ 301              		.file 15 "C:/Users/SAM.KINUTHIA/.icode/sdk/IoT_LINK_1.0.0/drivers/third_party/ST/STM32L4xx_HAL_Dri
+ 302              		.file 16 "C:/Users/SAM.KINUTHIA/Desktop/HCIAPROJECT/demofile2/targets/STM32L431_BearPi/Hardware/LC
+ARM GAS  C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hello_world_demo.c
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:18     .rodata:00000000 $d
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:22     .text.app_hello_world_entry:00000000 $t
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:28     .text.app_hello_world_entry:00000000 app_hello_world_entry
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:55     .text.app_hello_world_entry:00000014 $d
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:64     .text.task2:00000000 $t
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:70     .text.task2:00000000 task2
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:96     .text.task2:00000014 $d
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:101    .text.led_task:00000000 $t
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:107    .text.led_task:00000000 led_task
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:173    .text.led_task:0000005c $d
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:192    .text.standard_app_demo_main:00000000 $t
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:199    .text.standard_app_demo_main:00000000 standard_app_demo_main
+C:\Users\SAM~1.KIN\AppData\Local\Temp\ccudGDc8.s:275    .text.standard_app_demo_main:00000074 $d
+
+UNDEFINED SYMBOLS
+puts
+osal_task_sleep
+HAL_GPIO_Init
+HAL_GPIO_ReadPin
+HAL_GPIO_WritePin
+LCD_Clear
+LCD_ShowString
+osal_task_create
+POINT_COLOR

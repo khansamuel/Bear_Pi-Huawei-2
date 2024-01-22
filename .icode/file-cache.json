@@ -1,0 +1,61 @@
+{
+    "openFiles": [
+        {
+            "file": {
+                "name": "main.c",
+                "isFolder": false,
+                "path": "targets\\STM32L431_BearPi\\Src\\main.c",
+                "parentPath": "C:\\Users\\SAM.KINUTHIA\\Desktop\\HCIAPROJECT\\demofile2\\targets\\STM32L431_BearPi\\Src",
+                "level": 5,
+                "isOpen": false,
+                "fileExtension": ".c",
+                "size": 4532
+            },
+            "currentShow": false,
+            "isPreview": false,
+            "isChange": false
+        },
+        {
+            "file": {
+                "name": "los_task.c",
+                "path": "..\\..\\..\\.icode\\sdk\\IoT_LINK_1.0.0\\iot_link\\os\\liteos\\base\\core\\los_task.c",
+                "isFolder": false
+            },
+            "currentShow": false,
+            "isPreview": false,
+            "isChange": false
+        },
+        {
+            "file": {
+                "name": "oc_agriculture_template.c",
+                "isFolder": false,
+                "path": "targets\\STM32L431_BearPi\\Demos\\oc_agriculture_template\\oc_agriculture_template.c",
+                "parentPath": "C:\\Users\\SAM.KINUTHIA\\Desktop\\HCIAPROJECT\\demofile2\\targets\\STM32L431_BearPi\\Demos\\oc_agriculture_template",
+                "level": 6,
+                "isOpen": false,
+                "fileExtension": ".c",
+                "size": 12447
+            },
+            "currentShow": false,
+            "isPreview": false,
+            "isChange": false
+        },
+        {
+            "file": {
+                "name": "hello_world_demo.c",
+                "isFolder": false,
+                "path": "targets\\STM32L431_BearPi\\Demos\\hello_world_demo\\hello_world_demo.c",
+                "parentPath": "C:\\Users\\SAM.KINUTHIA\\Desktop\\HCIAPROJECT\\demofile2\\targets\\STM32L431_BearPi\\Demos\\hello_world_demo",
+                "level": 6,
+                "isOpen": false,
+                "fileExtension": ".c",
+                "size": 3983
+            },
+            "currentShow": false,
+            "isPreview": false,
+            "isChange": false
+        }
+    ],
+    "previewName": "..\\..\\..\\..\\..\\Program Files (x86)\\IoT Studio",
+    "currentShowName": "targets\\STM32L431_BearPi\\Demos\\hello_world_demo\\hello_world_demo.c"
+}
